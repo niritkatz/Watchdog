@@ -40,6 +40,6 @@ Clone the repository:
 
 To compile the watchdog, execute: ```make all```
 
-to run, excecute: ```make run client```
+to run, excecute: ```make run_client```
 
 to clean, excecute: ```make clean```

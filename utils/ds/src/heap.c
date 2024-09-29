@@ -180,7 +180,7 @@ static void HeapifyUp(heap_t *heap, size_t curr_index)
     parent_idx = (curr_index-1)/2;
     new_data = DVectorGetAccessToElement(heap->heap_container, curr_index);
     
-    while (parent_idx >= 0 && parent_idx != curr_index)
+    while (parent_idx >= 0 && parent_idx != (int)curr_index)
     {
         parent_data = DVectorGetAccessToElement(heap->heap_container, parent_idx);
         if (heap->cmp_func(*parent_data, *new_data) < 0 )

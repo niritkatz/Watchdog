@@ -117,7 +117,7 @@ void WDStop(void)
 
 /****************************STATIC FUNC********************************/
 
-static void *WDSched(void *args)
+static void *WDSched()
 {
     ilrd_uid_t uid = {0};
     pid_t pid = wd_struct.partner_pid;

@@ -163,7 +163,7 @@ void *PQDequeue(pq_t *pq)
 	return (data);
 }
 
-void *PQPeek(const pq_t *pq)
+void PQPeek(const pq_t *pq)
 {
     assert(pq);
 
