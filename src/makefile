@@ -1,7 +1,7 @@
 CC=gcc
-CFLAGS=-ansi -pedantic-errors -Wall -Wextra -g -I../inc/ -I../../ds/inc/
+CFLAGS=-ansi -pedantic-errors -Wall -Wextra -g -I../inc/ -I../utils/ds/inc/
 LDFLAGS=-pthread
-SRCDIR=../../ds/src
+SRCDIR=../utils/ds/src
 OBJDIR=obj
 CLIENT_SOURCES=wd_client.c wd.c $(SRCDIR)/scheduler.c $(SRCDIR)/pqueue.c $(SRCDIR)/task.c $(SRCDIR)/uid.c $(SRCDIR)/dvector.c $(SRCDIR)/heap.c
 PROC_SOURCES=wd_proc.c wd.c $(SRCDIR)/scheduler.c $(SRCDIR)/pqueue.c $(SRCDIR)/task.c $(SRCDIR)/uid.c $(SRCDIR)/dvector.c $(SRCDIR)/heap.c
