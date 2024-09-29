@@ -38,6 +38,8 @@ Clone the repository:
 
 ### Compiling and running the System
 
-To compile and run the watchdog, execute:
+To compile the watchdog, execute: ```make all```
 
-make
+to run, excecute: ```make run client```
+
+to clean, excecute: ```make clean```

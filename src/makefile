@@ -9,7 +9,8 @@ CLIENT_OBJECTS=$(addprefix $(OBJDIR)/,$(notdir $(CLIENT_SOURCES:.c=.o)))
 PROC_OBJECTS=$(addprefix $(OBJDIR)/,$(notdir $(PROC_SOURCES:.c=.o)))
 EXECUTABLES=wd_client wd_proc
 
-all: $(EXECUTABLES) run_client
+# Compilation only
+all: $(EXECUTABLES)
 
 wd_client: $(CLIENT_OBJECTS)
 	$(CC) $(LDFLAGS) $^ -o $@
@@ -25,7 +26,8 @@ $(OBJDIR)/%.o: %.c
 	@mkdir -p $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-run_client: wd_client
+# Run client after compilation
+run: wd_client
 	./wd_client ./wd_client
 
 .PHONY: clean
